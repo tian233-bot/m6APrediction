@@ -1,0 +1,23 @@
+Package: m6APrediction
+Type: Package
+Title: Predict m6A RNA Methylation Sites Using Random Forest Models
+Version: 1.0.0
+Authors@R: 
+    c(
+      person(given = "Haotian",
+             family = "Guo",
+             email = "Haotian.Guo23@student.xjtlu.edu.cn",
+             role = c("aut", "cre"))
+    )
+Description:
+    The m6APrediction package provides functions for encoding DNA 5-mer sequences
+    and predicting m6A methylation status using a trained randomForest model.
+    It includes utilities for both single and multiple predictions,
+    as well as feature encoding for machine learning workflows.
+Depends: R (>= 3.5.0)
+Imports: 
+    randomForest,
+    stats
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.3.3
