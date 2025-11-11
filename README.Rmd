@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-# m6APrediction
+# 🧬 m6APrediction
 
 ### Predict m6A RNA Methylation Sites Using Random Forest Models
 
@@ -10,27 +10,30 @@ output: github_document
 
 ## 📘 Overview
 
-**m6APrediction** is an R package developed to predict **N6-methyladenosine (m6A)** RNA methylation sites.  
-It provides functions for:
-- Encoding DNA 5-mer sequences into position-based categorical features  
-- Predicting m6A modification probabilities using a trained **Random Forest** model  
-- Supporting both single-sample and multiple-sample predictions  
+**m6APrediction** is an R package developed to predict **N6-methyladenosine (m6A)** RNA methylation sites in RNA sequences.  
+It provides user-friendly functions for:
 
-This package was created for the **BIO215 coursework** to demonstrate the use of machine learning in RNA modification analysis.
+- 🧩 **Encoding** DNA 5-mer sequences into position-based categorical features  
+- 🔍 **Predicting** m6A modification probabilities using a trained **Random Forest** model  
+- ⚡ Supporting both **single** and **multiple** sample predictions  
+
+This package was created for the **BIO215 coursework** to demonstrate the application of machine learning in RNA modification analysis.
 
 ---
 
 ## ⚙️ Installation
 
-You can install the package directly from GitHub using **devtools**:
+You can install the package directly from GitHub using **devtools** or **remotes**:
 
-
-```{r}
+```r
 # Install devtools if not already installed
 install.packages("devtools")
+
 # Install m6APrediction from GitHub
-devtools::install_github("yourusername/m6APrediction")
-```
+devtools::install_github("tian233-bot/m6APrediction")
+
+# Or alternatively, using remotes
+# remotes::install_github("tian233-bot/m6APrediction")
 ---
 
 ## 🧬 Example Usage
@@ -88,7 +91,9 @@ prediction_single(
 ```
 
 ##📈 Model Performance Visualization
-###📊 Example 4: Include ROC and PRC Curves
+
+###To showcase the model’s predictive power, include the ROC and PRC curve images from your Practical 4 results.
+These figures should be placed under man/figures/ within your package directory.
 ```{r}
 # Insert performance images stored in man/figures/
 knitr::include_graphics("man/figures/ROC_curve.png")
