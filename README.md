@@ -39,7 +39,7 @@ library(m6APrediction)
 
 ##  Quick Start
 
-### 1.Load the package and bundled example data
+### Load the package and bundled example data
 ```{r}
 library(m6APrediction)
 
@@ -56,7 +56,7 @@ example_df <- read.csv(
 head(example_df)
 ```
 
-### Example 2. Predict Multiple m6A Sites
+### Example 1. Predict Multiple m6A Sites
 ```{r}
 library(m6APrediction)
 library(randomForest)
@@ -85,10 +85,8 @@ preds <- prediction_multiple(ml_fit, feature_df)
 head(preds)
 ```
 	
-predicted_m6A_prob gives the model-estimated probability that a site is m6A-modified.
-predicted_m6A_status is a binary call (e.g. “Positive”/“Negative”) based on the specified positive_threshold.
 
-### Example 3: Predict a Single m6A Site
+### Example 2: Predict a Single m6A Site
 ```{r}
 # Predict m6A status for one example sequence
 prediction_single(
