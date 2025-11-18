@@ -94,9 +94,7 @@ prediction_single(
 
 ###To showcase the model’s predictive power, include the ROC and PRC curve images from your Practical 4 results.
 These figures should be placed under man/figures/ within your package directory.
-```{r}
-# Insert performance images stored in man/figures/
-knitr::include_graphics("man/figures/ROC_curve.png")
-knitr::include_graphics("man/figures/PRC_curve.png")
-```
+
+![](figures/ROC_curve.png)
+![](figures/PRC_curve.png)
 
