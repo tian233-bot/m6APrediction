@@ -12,7 +12,7 @@ The package is intended as a compact, teaching-oriented toolkit for epitranscrip
 
 ---
 ##  Feature
-** m6APrediction** provides a streamlined interface for:
+` m6APrediction` provides a streamlined interface for:
 
 -  **Encoding** DNA 5-mer sequences into position-specific categorical predictors suitable for input into tree-based models  
 -  **Estimating** m6A modification probabilities using a trained **Random Forest** classifier, returning both discrete calls and posterior probabilities  
