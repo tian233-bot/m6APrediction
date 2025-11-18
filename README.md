@@ -89,8 +89,7 @@ prediction_single(
 
 ## Model Performance Visualization
 
-###To showcase the model’s predictive power, include the ROC and PRC curve images from my Practical 4 results.
-These figures should be placed under man/figures/ within your package directory.
+###To showcase the model’s predictive power, I have included the ROC and PRC curve images.
 
 ![](figures/ROC_curve.png)
 ![](figures/PRC_curve.png)
