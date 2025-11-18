@@ -39,7 +39,7 @@ library(m6APrediction)
 
 ##  Quick Start
 
-### 💡Load the package and bundled example data
+### 1.Load the package and bundled example data
 ```{r}
 library(m6APrediction)
 
@@ -56,7 +56,7 @@ example_df <- read.csv(
 head(example_df)
 ```
 
-### Example 1: Predict Multiple m6A Sites
+### Example 2. Predict Multiple m6A Sites
 ```{r}
 library(m6APrediction)
 library(randomForest)
@@ -84,8 +84,10 @@ ml_fit <- randomForest::randomForest(
 preds <- prediction_multiple(ml_fit, feature_df)
 head(preds)
 ```
+	•	predicted_m6A_prob gives the model-estimated probability that a site is m6A-modified.
+	•	predicted_m6A_status is a binary call (e.g. “Positive”/“Negative”) based on the specified positive_threshold.
 
-### Example 2: Predict a Single m6A Site
+### Example 3: Predict a Single m6A Site
 ```{r}
 # Predict m6A status for one example sequence
 prediction_single(
@@ -100,11 +102,16 @@ prediction_single(
 )
 print(single_result)
 ```
-### Example 3: encode DNA 5-mer sequences
-If you only need to encode DNA 5-mer sequences into positional categorical features:
+This returns a small object (e.g. data frame or list) containing the predicted probability
+and the corresponding m6A status for the specified site.
+
+### Example 3: Predict a Single m6A Site
+If you only need to convert raw 5-mer sequences into positional categorical features,
+you can use dna_encoding() directly:
 ```{r}
 dna_encoding(c("ATCGA", "GGGTT"))
 ```
+
 ## Model Performance Visualization
 
 To showcase the model’s predictive power, I have included the ROC and PRC curve images.
