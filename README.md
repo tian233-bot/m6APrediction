@@ -6,7 +6,7 @@
 
 ##  Overview
 
-**m6APrediction** is an R package designed for the computational prediction of **N6-methyladenosine (m6A)** RNA methylation sites based on sequence-derived and contextual features. It implements a supervised learning workflow in which candidate adenosines are encoded into machine-readable predictors and classified as **m6A-modified** or **unmodified** using a **Random Forest** model.
+m6APrediction is an R package designed for the computational prediction of **N6-methyladenosine (m6A)** RNA methylation sites based on sequence-derived and contextual features. It implements a supervised learning workflow in which candidate adenosines are encoded into machine-readable predictors and classified as **m6A-modified** or **unmodified** using a **Random Forest** model.
 
 The package is intended as a compact, teaching-oriented toolkit for epitranscriptomic analysis, enabling users to explore how classical machine learning methods can be applied to post-transcriptional regulation. In particular, it focuses on feature engineering for short sequence windows and on interpreting model outputs (predicted class labels and associated probabilities) in the context of RNA biology.
 
@@ -18,10 +18,6 @@ The package is intended as a compact, teaching-oriented toolkit for epitranscrip
 -  **Estimating** m6A modification probabilities using a trained **Random Forest** classifier, returning both discrete calls and posterior probabilities  
 -  Performing predictions for both **single** candidate sites and **batches** of sites supplied as a feature table, facilitating integration into larger analysis pipelines  
 ---
-##  conclusion
-The package was developed within the context of the **BIO215** module as a didactic example of how to go from biological hypothesis (presence of m6A marks) to feature design, model training, and prediction in R. While lightweight by design, it can be extended with alternative feature sets or classifiers for more advanced epitranscriptomic studies.
----
-
 ##  Installation
 
 You can install the package directly from GitHub using **devtools** or **remotes**:
