@@ -17,7 +17,8 @@ The package is intended as a compact, teaching-oriented toolkit for epitranscrip
 -  **Encoding** DNA 5-mer sequences into position-specific categorical predictors suitable for input into tree-based models  
 -  **Estimating** m6A modification probabilities using a trained **Random Forest** classifier, returning both discrete calls and posterior probabilities  
 -  Performing predictions for both **single** candidate sites and **batches** of sites supplied as a feature table, facilitating integration into larger analysis pipelines  
-
+---
+##  conclusion
 The package was developed within the context of the **BIO215** module as a didactic example of how to go from biological hypothesis (presence of m6A marks) to feature design, model training, and prediction in R. While lightweight by design, it can be extended with alternative feature sets or classifiers for more advanced epitranscriptomic studies.
 ---
 
