@@ -1,23 +1,25 @@
-# 🧬 m6APrediction
+#  m6APrediction
 
 ### Predict m6A RNA Methylation Sites Using Random Forest Models
 
 ---
 
-## 📘 Overview
+##  Overview
 
-**m6APrediction** is an R package developed to predict **N6-methyladenosine (m6A)** RNA methylation sites in RNA sequences.  
-It provides user-friendly functions for:
+**m6APrediction** is an R package designed for the computational prediction of **N6-methyladenosine (m6A)** RNA methylation sites based on sequence-derived and contextual features. It implements a supervised learning workflow in which candidate adenosines are encoded into machine-readable predictors and classified as **m6A-modified** or **unmodified** using a **Random Forest** model.
 
-- 🧩 **Encoding** DNA 5-mer sequences into position-based categorical features  
-- 🔍 **Predicting** m6A modification probabilities using a trained **Random Forest** model  
-- ⚡ Supporting both **single** and **multiple** sample predictions  
+The package is intended as a compact, teaching-oriented toolkit for epitranscriptomic analysis, enabling users to explore how classical machine learning methods can be applied to post-transcriptional regulation. In particular, it focuses on feature engineering for short sequence windows and on interpreting model outputs (predicted class labels and associated probabilities) in the context of RNA biology.
 
-This package was created for the **BIO215 coursework** to demonstrate the application of machine learning in RNA modification analysis.
+** m6APrediction** provides a streamlined interface for:
 
+-  **Encoding** DNA 5-mer sequences into position-specific categorical predictors suitable for input into tree-based models  
+-  **Estimating** m6A modification probabilities using a trained **Random Forest** classifier, returning both discrete calls and posterior probabilities  
+-  Performing predictions for both **single** candidate sites and **batches** of sites supplied as a feature table, facilitating integration into larger analysis pipelines  
+
+The package was developed within the context of the **BIO215** module as a didactic example of how to go from biological hypothesis (presence of m6A marks) to feature design, model training, and prediction in R. While lightweight by design, it can be extended with alternative feature sets or classifiers for more advanced epitranscriptomic studies.
 ---
 
-## ⚙️ Installation
+##  Installation
 
 You can install the package directly from GitHub using **devtools** or **remotes**:
 
@@ -32,7 +34,7 @@ devtools::install_github("tian233-bot/m6APrediction")
 # remotes::install_github("tian233-bot/m6APrediction")
 ---
 
-## 🧬 Example Usage
+##  Example Usage
 
 ### 💡 Example 1: Encode DNA 5-mer Sequences
 ```{r}
@@ -42,7 +44,7 @@ library(m6APrediction)
 dna_encoding(c("ATCGA", "GGGTT"))
 ```
 
-###🔁 Example 2: Predict Multiple m6A Sites
+### Example 2: Predict Multiple m6A Sites
 ```{r}
 library(m6APrediction)
 library(randomForest)
@@ -71,7 +73,7 @@ preds <- prediction_multiple(ml_fit, feature_df)
 head(preds)
 ```
 
-###🎯 Example 3: Predict a Single m6A Site
+### Example 3: Predict a Single m6A Site
 ```{r}
 # Predict m6A status for one example sequence
 prediction_single(
@@ -86,7 +88,7 @@ prediction_single(
 )
 ```
 
-##📈 Model Performance Visualization
+## Model Performance Visualization
 
 ###To showcase the model’s predictive power, include the ROC and PRC curve images from my Practical 4 results.
 These figures should be placed under man/figures/ within your package directory.
