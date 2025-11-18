@@ -84,8 +84,9 @@ ml_fit <- randomForest::randomForest(
 preds <- prediction_multiple(ml_fit, feature_df)
 head(preds)
 ```
-	•	predicted_m6A_prob gives the model-estimated probability that a site is m6A-modified.
-	•	predicted_m6A_status is a binary call (e.g. “Positive”/“Negative”) based on the specified positive_threshold.
+	
+predicted_m6A_prob gives the model-estimated probability that a site is m6A-modified.
+predicted_m6A_status is a binary call (e.g. “Positive”/“Negative”) based on the specified positive_threshold.
 
 ### Example 3: Predict a Single m6A Site
 ```{r}
