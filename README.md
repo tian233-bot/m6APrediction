@@ -56,7 +56,7 @@ example_df <- read.csv(
 head(example_df)
 ```
 
-### Example 2: Predict Multiple m6A Sites
+### Example 1: Predict Multiple m6A Sites
 ```{r}
 library(m6APrediction)
 library(randomForest)
@@ -85,7 +85,7 @@ preds <- prediction_multiple(ml_fit, feature_df)
 head(preds)
 ```
 
-### Example 3: Predict a Single m6A Site
+### Example 2: Predict a Single m6A Site
 ```{r}
 # Predict m6A status for one example sequence
 prediction_single(
@@ -99,7 +99,11 @@ prediction_single(
   DNA_5mer = "ATCGA"
 )
 ```
-
+### Example 3: encode DNA 5-mer sequences
+If you only need to encode DNA 5-mer sequences into positional categorical features:
+```{r}
+dna_encoding(c("ATCGA", "GGGTT"))
+```
 ## Model Performance Visualization
 
 To showcase the model’s predictive power, I have included the ROC and PRC curve images.
