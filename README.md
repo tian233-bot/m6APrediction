@@ -1,7 +1,3 @@
----
-output: github_document
----
-
 # 🧬 m6APrediction
 
 ### Predict m6A RNA Methylation Sites Using Random Forest Models
