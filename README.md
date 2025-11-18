@@ -10,6 +10,8 @@
 
 The package is intended as a compact, teaching-oriented toolkit for epitranscriptomic analysis, enabling users to explore how classical machine learning methods can be applied to post-transcriptional regulation. In particular, it focuses on feature engineering for short sequence windows and on interpreting model outputs (predicted class labels and associated probabilities) in the context of RNA biology.
 
+---
+##  Feature
 ** m6APrediction** provides a streamlined interface for:
 
 -  **Encoding** DNA 5-mer sequences into position-specific categorical predictors suitable for input into tree-based models  
