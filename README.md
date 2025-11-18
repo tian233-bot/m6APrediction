@@ -18,29 +18,42 @@ The package is intended as a compact, teaching-oriented toolkit for epitranscrip
 -  **Estimating** m6A modification probabilities using a trained **Random Forest** classifier, returning both discrete calls and posterior probabilities  
 -  **Performing predictions** for both **single** candidate sites and **batches** of sites supplied as a feature table, facilitating integration into larger analysis pipelines  
 ---
-##  Installation
+## ⚙️ Installation
 
-You can install the package directly from GitHub using **devtools** or **remotes**:
+You can install **m6APrediction** directly from GitHub using either **devtools** or **remotes**:
 
 ```r
-# Install devtools if not already installed
-install.packages("devtools")
-
-# Install m6APrediction from GitHub
+# Install from GitHub using devtools
+if (!require("devtools")) install.packages("devtools")
 devtools::install_github("tian233-bot/m6APrediction")
 
-# Or alternatively, using remotes
-# remotes::install_github("tian233-bot/m6APrediction")
+# Alternatively, using remotes
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("tian233-bot/m6APrediction")
+```
+After installation, load the package:
+```r
+library(m6APrediction)
+```
 ---
 
-##  Example Usage
+##  Quick Start
 
-### 💡 Example 1: Encode DNA 5-mer Sequences
+### 💡Load the package and bundled example data
 ```{r}
 library(m6APrediction)
 
-# Example: Encode 5-mer sequences into positional factor features
-dna_encoding(c("ATCGA", "GGGTT"))
+# Load the pre-trained Random Forest model shipped with the package
+ml_fit <- readRDS(
+  system.file("extdata", "rf_fit.rds", package = "m6APrediction")
+)
+
+# Load example input features for candidate m6A sites
+example_df <- read.csv(
+  system.file("extdata", "m6A_input_example.csv", package = "m6APrediction")
+)
+
+head(example_df)
 ```
 
 ### Example 2: Predict Multiple m6A Sites
