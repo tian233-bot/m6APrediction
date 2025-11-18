@@ -98,6 +98,7 @@ prediction_single(
   evolutionary_conservation = 0.7,
   DNA_5mer = "ATCGA"
 )
+print(single_result)
 ```
 ### Example 3: encode DNA 5-mer sequences
 If you only need to encode DNA 5-mer sequences into positional categorical features:
