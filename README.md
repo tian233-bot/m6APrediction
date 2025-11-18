@@ -89,7 +89,7 @@ prediction_single(
 
 ## Model Performance Visualization
 
-###To showcase the model’s predictive power, I have included the ROC and PRC curve images.
+To showcase the model’s predictive power, I have included the ROC and PRC curve images.
 
 ![](figures/ROC_curve.png)
 ![](figures/PRC_curve.png)
